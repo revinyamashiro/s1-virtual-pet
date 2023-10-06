@@ -32,7 +32,7 @@ public class VirtualPet {
         face.setImage("tired");
 
         if(tiredness < 4){
-            face.setMessage("That was ")
+            face.setMessage("That was great!");
             face.setImage("ecstatic");
         }
     }
