@@ -8,6 +8,7 @@ public class VirtualPet {
     VirtualPetFace face;
     private int hunger = 0;   // how hungry the pet is.
     private int tiredness = 0;
+    private int score = 0;
     
     // constructor
     public VirtualPet() {
@@ -40,6 +41,21 @@ public class VirtualPet {
     public void sleep() {
         hunger = hunger + 1;
         face.setImage("asleep");
+    }
+
+    public void shoot(){
+        score = score + 3;
+        face.setMessage("Swish! The score is now: " + score);
+        face.setImage("swish");
+    }
+
+    public void block(){
+        face.setMessage("I've got you now!...Blocked!");
+        face.setImage("block");
+    }
+
+    public void newGame(){
+        score = 0;
     }
 
 } // end Virtual Pet

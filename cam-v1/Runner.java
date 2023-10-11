@@ -4,13 +4,19 @@ import javax.swing.JOptionPane;
 public class Runner{
     public Runner(){
         VirtualPet p = new VirtualPet();
-        p.exercise();
+        // p.exercise();
+        // takeABeat(1000);
+        // p.feed();
+        // takeABeat(1000);
+        // p.exercise();
+        // String ans = getResponse("How was your day?");
+        // System.out.println(ans);
+        // p.newGame();
+        p.shoot();
         takeABeat(1000);
-        p.feed();
+        p.block();
         takeABeat(1000);
-        p.exercise();
-        String ans = getResponse("How was your day?");
-        System.out.println(ans);
+        p.shoot();
         }
 
     public String getResponse(String q){
