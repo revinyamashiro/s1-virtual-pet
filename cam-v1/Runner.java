@@ -11,12 +11,43 @@ public class Runner{
         // p.exercise();
         // String ans = getResponse("How was your day?");
         // System.out.println(ans);
-        // p.newGame();
-        p.shoot();
-        takeABeat(1000);
+        p.newGame();
+        p.dribble();
+        takeABeat(5000);
+        p.shot();
+        takeABeat(5000);
+        p.make();
+        takeABeat(5000);
+        p.dribble();
+        takeABeat(5000);
+        p.dunk();
+        takeABeat(5000);
+        p.dribble();
+        takeABeat(5000);
+        p.shot();
+        takeABeat(5000);
         p.block();
-        takeABeat(1000);
-        p.shoot();
+        takeABeat(5000);
+        p.dribble();
+        takeABeat(5000);
+        p.steal();
+        takeABeat(7000);
+
+
+        // p.make();
+        // takeABeat(3000);
+        // p.block();
+        // takeABeat(3000);
+        // p.make();
+        // takeABeat(3000);
+        // p.dribble();
+        // takeABeat(5000);
+        // p.dribble();
+        // takeABeat(5000);
+        // p.dribble();
+        // takeABeat(5000);
+        // p.dunk();
+    
         }
 
     public String getResponse(String q){
