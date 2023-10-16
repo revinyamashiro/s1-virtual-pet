@@ -3,14 +3,7 @@ import javax.swing.JOptionPane;
 
 public class Runner{
     public Runner(){
-        VirtualPet p = new VirtualPet();
-        // p.exercise();
-        // takeABeat(1000);
-        // p.feed();
-        // takeABeat(1000);
-        // p.exercise();
-        // String ans = getResponse("How was your day?");
-        // System.out.println(ans);
+        VirtualPet p = new VirtualPet(getResponse("What's your name?"));
         p.newGame();
         p.dribble();
         takeABeat(5000);
@@ -18,20 +11,39 @@ public class Runner{
         takeABeat(5000);
         p.make();
         takeABeat(5000);
+        p.oppDribble();
+        takeABeat(5000);
+        p.oppShot();
+        takeABeat(5000);
+        p.oppMake();
+        takeABeat(5000);
         p.dribble();
         takeABeat(5000);
         p.dunk();
         takeABeat(5000);
-        p.dribble();
+        p.oppDribble();
         takeABeat(5000);
-        p.shot();
+        p.oppShot();
         takeABeat(5000);
         p.block();
         takeABeat(5000);
         p.dribble();
         takeABeat(5000);
-        p.steal();
+        p.shot();
+        takeABeat(5000);
+        p.make();
+        takeABeat(5000);
+        p.dribble();
         takeABeat(7000);
+        p.steal();
+        takeABeat(5000);
+        p.oppDribble();
+        takeABeat(5000);
+        p.oppShot();
+        takeABeat(5000);
+        p.oppMake();
+        takeABeat(5000);
+        p.winner();
 
 
         // p.make();

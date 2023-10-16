@@ -9,12 +9,15 @@ public class VirtualPet {
     private int hunger = 0;   // how hungry the pet is.
     private int tiredness = 0;
     private int score = 0;
+    private int oppScore = 0;
+    private String name;
     
     // constructor
-    public VirtualPet() {
+    public VirtualPet(String name) {
+        this.name = name;
         face = new VirtualPetFace();
-        face.setImage("normal");
-        face.setMessage("Hello.");
+        // face.setImage("normal");
+        face.setMessage("Welcome to the biggest basketball game of the Century! We have " + name + " vs. Mr. Morris");
     }
     
     public void feed() {
@@ -47,46 +50,74 @@ public class VirtualPet {
         int shot = (int)(Math.random()*3)+2;
         if(shot == 3){
         score = score + 3;
-        face.setMessage("3-point Swish! The score is now: " + score);
+        face.setMessage("3-point Swish! The score is now: " + score + " - " + oppScore);
         face.setImage("swish");
         }
         else{
             score = score + 2;
-        face.setMessage("2-point Splash! The score is now: " + score);
+        face.setMessage("2-point Splash! The score is now: " + score + " - " + oppScore);
+        face.setImage("swish");
+        }
+    }
+
+    public void oppMake(){
+        int shot = (int)(Math.random()*3)+2;
+        if(shot == 3){
+        oppScore = oppScore + 3;
+        face.setMessage("3-point Swish! The score is now: " + score + " - " + oppScore);
+        face.setImage("swish");
+        }
+        else{
+            oppScore = oppScore + 2;
+        face.setMessage("2-point Splash! The score is now: " + score + " - " + oppScore);
         face.setImage("swish");
         }
     }
 
     public void block(){
-        face.setMessage("I've got you now!...Blocked!");
+        face.setMessage("I've got you now!...Blocked by " + name + "!");
+        face.setImage("block");
+    }
+
+    public void oppBlock(){
+        face.setMessage("I've got you now!...Blocked by Mr. Morris!");
         face.setImage("block");
     }
 
     public void dunk(){
         score = score + 2;
-        face.setMessage("Slam Dunk! The score is now: " + score);
+        face.setMessage("Slam Dunk! The score is now: " + score + " - " + oppScore);
         face.setImage("dunk");
     }
 
     public void dribble(){
-        // face.setMessage("Player 1 is dribbling up the court!");
-        // int steal = (int)(Math.random()*10);
-        // if(steal >= 5){
-        //     face.setMessage("Stolen and scored by the defender!");
-        //     face.setImage("steal");
-        // }
-            face.setMessage("Tween-Tween, Cross!");
-            face.setImage("dribble");
-        }
+        face.setMessage(name + " is dribbling up the court!");
+        face.setImage("dribble");
+    }
+
+    public void oppDribble(){
+        face.setMessage("Mr. Morris is dribbling up the court!");
+        face.setImage("dribble");
+    }
 
     public void steal(){
-        face.setMessage("Stolen and scored by the defender!");
+        face.setMessage("Stolen by Mr. Morris!");
         face.setImage("steal");
     }
 
     public void shot(){
-        face.setMessage("Player 1 with the shot!");
+        face.setMessage(name + " with the shot!");
         face.setImage("shot");
+    }
+
+    public void oppShot(){
+        face.setMessage("Mr. Morris with the shot!");
+        face.setImage("shot");
+    }
+
+    public void winner(){
+        face.setMessage(name + " wins " + score + " - " + oppScore + "!");
+        face.setImage("win");
     }
 
     public void newGame(){
