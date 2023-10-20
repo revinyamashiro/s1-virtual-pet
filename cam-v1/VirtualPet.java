@@ -116,8 +116,14 @@ public class VirtualPet {
     }
 
     public void winner(){
-        face.setMessage(name + " wins " + score + " - " + oppScore + "!");
-        face.setImage("win");
+        if(score > oppScore){
+            face.setMessage(name + " wins " + score + " - " + oppScore + "!");
+            face.setImage("win");
+        }
+        else{
+            face.setMessage("Mr. Morris wins " + score + " - " + oppScore + "!");
+            face.setImage("win");
+        }
     }
 
     public void newGame(){

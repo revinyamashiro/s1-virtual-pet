@@ -34,7 +34,7 @@ public class Runner{
         p.make();
         takeABeat(5000);
         p.dribble();
-        takeABeat(7000);
+        takeABeat(5000);
         p.steal();
         takeABeat(5000);
         p.oppDribble();
@@ -72,6 +72,17 @@ public class Runner{
     return s;
 
     }
+
+    public void userScore(){
+        String ans = getResponse("Do you want to SHOOT or DUNK? Type 1 for SHOOT and 2 for DUNK");
+        if(ans == "1"){
+            shot();
+        }
+        else{
+            dunk();
+        }
+
+        }
 
     public void takeABeat(int milliseconds){
         try {
